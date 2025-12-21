@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Section from './components/Section';
+import ProjectCard from './components/ProjectCard';
+import { projects } from './data/projects';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <main style={{ marginTop: '70px' }}>
+        <Section id="home" title="Kevin Zhang">
+          <p>Étudiant ingénieur en informatique, intéressé par systèmes, réseaux et cybersécurité.</p>
+        </Section>
+
+        <Section id="projects" title="Projets">
+          <div className="row g-4">
+            {projects.map((p, idx) => (
+              <div key={idx} className="col-md-4">
+                <ProjectCard {...p} />
+              </div>
+            ))}
+          </div>
+        </Section>
+      </main>
+      <Footer />
+    </>
   );
 }
-
-export default App;
