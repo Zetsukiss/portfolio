@@ -1,19 +1,26 @@
-import React from 'react';
+// src/components/ProjectCard.tsx
+import React from "react";
 
-export interface Project {
+export interface Project { 
   title: string;
   description: string;
-  link: string;
+  image?: string;
+  link?: string;
 }
 
-export default function ProjectCard({ title, description, link }: Project) {
+const ProjectCard: React.FC<Project> = ({ title, description, image, link }) => {
   return (
-    <div className="card h-100">
-      <div className="card-body d-flex flex-column">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text flex-grow-1">{description}</p>
-        <a href={link} className="btn btn-primary mt-3">Voir le projet</a>
-      </div>
+    <div className="card">
+      {image && <img src={image} alt={title} style={{ width: "100%", borderRadius: "1rem", marginBottom: "1rem", objectFit: "cover" }} />}
+      <h3 className="card-title">{title}</h3>
+      <p className="card-text">{description}</p>
+      {link && (
+        <a href={link} target="_blank" rel="noreferrer" className="btn-primary">
+          Voir le projet
+        </a>
+      )}
     </div>
   );
-}
+};
+
+export default ProjectCard;
