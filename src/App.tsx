@@ -6,6 +6,7 @@ import ProjectCard from './components/ProjectCard';
 import { projects } from './data/projects';
 import Contact from "./components/Contacts";
 import AboutMe from './components/AboutMe';
+import Voiraussi from './components/Voiraussi';
 
 export default function App() {
   return (
@@ -16,12 +17,14 @@ export default function App() {
   <div className="hero-content">
     <div className="hero-left">
       <h1>Kevin Zhang</h1>
-      <p>
-        Bienvenue sur mon portfolio. Il regroupe mes projets, mes activités académiques et professionnelles,
-        ainsi que des preuves de mon assiduité et de mon parcours.
-      </p>
+        <p>
+          Bienvenue sur mon portfolio. Vous y trouverez un aperçu de mon parcours académique et professionnel, 
+          mes projets personnels et collaboratifs, ainsi que mes expériences pratiques. 
+          J'y partage également mes réalisations, mes compétences techniques et mes capacitées, 
+          ainsi que mon engagement et ma motivation à apprendre et à progresser.
+        </p>
     <p className="subtitle">
-      Orientation Blue Team • SOC • Réponse aux incidents • Ingénierie en cybersécurité • Réseaux & télécoms
+      { /* Orientation Blue Team • SOC • CERT • CSIRT • Réseaux & télécoms */ }
     </p>
     </div>
 
@@ -60,8 +63,8 @@ export default function App() {
 
       </main>
       <Contact />
+      <Voiraussi />
       <Footer />
-
     </>
     
   );

@@ -9,7 +9,7 @@ const AboutMe = () => {
         Je suis Kevin Zhang, étudiant en ingénierie informatique avec une spécialisation en cybersécurité. Avant mon parcours d’ingénieur, j’ai obtenu un BTS, ce qui m’a donné une solide base technique et pratique.
         </p>
         <p>
-        En dehors des cours, je participe activement à des clubs informatiques, des CTF, et des plateformes comme TryHackMe, RootMe et Coursera, afin de renforcer mes compétences et me rapprocher de mon objectif : travailler dans le domaine de la cybersécurité.
+        En dehors des cours, je participe activement à des clubs informatiques, des CTF, et des plateformes comme TryHackMe, RootMe et Coursera, afin de renforcer mes compétences et me rapprocher de mes objectif.
         </p>
         <p>
         J’aime relever des défis et apprendre par la pratique, en explorant de nouvelles technologies et en développant mes compétences de manière autonome. 
